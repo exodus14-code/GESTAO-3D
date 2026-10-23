@@ -28,14 +28,15 @@ o Claude para apontar a pasta do computador para o repositório novo (senão o "
 ## Parte A2 — Publicar na Vercel (em vez do GitHub Pages)
 
 O app é só um conjunto de arquivos prontos (a pasta `dist/` já vai no repositório), então a Vercel só precisa
-publicá-los. O arquivo `vercel.json` do repositório já diz isso: sem instalar nada e sem rodar o build (o build só
-funciona no computador do dono).
+publicá-los. O arquivo `vercel.json` do repositório já diz isso: troca a instalação e o build por um `echo` (o build
+de verdade só funciona no computador do dono). Escrever `null` ou deixar vazio **não** desliga o build: a Vercel
+volta a rodar `npm run build` e o deploy falha com "Ferramentas não encontradas. Rode: npm run setup".
 
 1. Entre em https://vercel.com (dá para usar **Continue with GitHub**).
 2. **Add New...** > **Project** > ao lado de **GESTAO-3D**, clique em **Import**. Se o repositório não aparecer,
    clique em **Adjust GitHub App Permissions** e libere o acesso a ele.
-3. Não mude nada na tela de configuração. Em **Framework Preset** deve aparecer **Other**, e **Build Command** e
-   **Install Command** ficam vazios.
+3. Não mude nada na tela de configuração: o `vercel.json` já manda pular a instalação e o build. Em **Framework
+   Preset** deve aparecer **Other**. No log do deploy aparecem as linhas "sem instalacao" e "sem build".
 4. Clique em **Deploy**. Em cerca de 1 minuto aparece o endereço `https://<nome>.vercel.app` (dá para trocar o
    nome em **Settings > Domains**).
 5. No Supabase, em **Authentication > URL Configuration**, troque o **Site URL** pelo endereço da Vercel e salve.

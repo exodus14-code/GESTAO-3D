@@ -5,6 +5,16 @@ Formato: [vX.Y.Z] - AAAA-MM-DD
 
 ---
 
+## [v2.2.2] - 2026-10-23
+
+### Corrigido
+- Deploy na Vercel falhava com "Ferramentas não encontradas. Rode: npm run setup": `"buildCommand": null` no
+  `vercel.json` não desliga o build (a Vercel volta a rodar `npm run build`). Agora a instalação e o build viram
+  `echo` e a Vercel só publica os arquivos. Reproduzido e testado com o programa da Vercel (65.1.0)
+- `PUBLICAR.md` (Parte A2) e decisão 108 atualizados com isso
+
+---
+
 ## [v2.2.1] - 2026-10-23
 
 ### Adicionado
