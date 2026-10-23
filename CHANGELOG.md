@@ -5,6 +5,18 @@ Formato: [vX.Y.Z] - AAAA-MM-DD
 
 ---
 
+## [v2.2.1] - 2026-10-23
+
+### Adicionado
+- Publicação na Vercel: `vercel.json` manda publicar os arquivos como estão (sem instalar nada e sem rodar o build,
+  que só funciona no computador do dono). Passo a passo em `PUBLICAR.md` (Parte A2)
+
+### Corrigido
+- Ícones PNG que o app pedia e não existiam (`octa-180.png`, `octa-192.png` e `octa-512.png`): o ícone na tela de
+  início do iPhone, a instalação no Android e os ícones dos atalhos apontavam para arquivos ausentes
+
+---
+
 ## [v2.2.0] - 2026-10-23
 
 Cadastro de produto rápido e a conta detalhada numa Calculadora à parte (decisão 107).

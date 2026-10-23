@@ -371,3 +371,11 @@ Registro das escolhas feitas onde a especificação não define, ou deixa a crit
     um produto novo ("Criar produto com este custo") ou existente ("Usar"); a conta fica guardada no aparelho.
     Produtos antigos com ficha detalhada continuam calculando pela ficha até o dono mudar o custo ou as gramas.
     Revisa a decisão 92.
+
+## Hospedagem (23/10/2026)
+
+108. **Vercel como alternativa ao GitHub Pages.** O app é só um conjunto de arquivos prontos (a pasta `dist/` e o
+    `sw.js` vão no repositório), então a Vercel só publica: o `vercel.json` desliga o framework, a instalação e o
+    build (o script `build` depende do esbuild do computador do dono e falharia lá) e usa a raiz como saída. As
+    versões novas chegam a cada "salve". O app guarda os dados por endereço: ao trocar de endereço, o app abre vazio
+    e os dados voltam pela nuvem ou por um backup. Os ícones PNG do iPhone e do Android passam a existir no repositório.

@@ -25,6 +25,26 @@ Se preferir o site em **outra conta do GitHub**: entre na conta nova, clique em 
 passos 2 a 5 no repositório novo. O endereço passa a ser `https://<conta-nova>.github.io/<nome-do-repo>/`. Avise
 o Claude para apontar a pasta do computador para o repositório novo (senão o "salve" continua indo para o antigo).
 
+## Parte A2 — Publicar na Vercel (em vez do GitHub Pages)
+
+O app é só um conjunto de arquivos prontos (a pasta `dist/` já vai no repositório), então a Vercel só precisa
+publicá-los. O arquivo `vercel.json` do repositório já diz isso: sem instalar nada e sem rodar o build (o build só
+funciona no computador do dono).
+
+1. Entre em https://vercel.com (dá para usar **Continue with GitHub**).
+2. **Add New...** > **Project** > ao lado de **GESTAO-3D**, clique em **Import**. Se o repositório não aparecer,
+   clique em **Adjust GitHub App Permissions** e libere o acesso a ele.
+3. Não mude nada na tela de configuração. Em **Framework Preset** deve aparecer **Other**, e **Build Command** e
+   **Install Command** ficam vazios.
+4. Clique em **Deploy**. Em cerca de 1 minuto aparece o endereço `https://<nome>.vercel.app` (dá para trocar o
+   nome em **Settings > Domains**).
+5. No Supabase, em **Authentication > URL Configuration**, troque o **Site URL** pelo endereço da Vercel e salve.
+6. Abra o endereço da Vercel. Como é um endereço novo, o app abre vazio: entre na conta pela nuvem (Parte C) ou use
+   **Restaurar um backup**.
+
+A cada "salve", a Vercel publica a versão nova sozinha em cerca de 1 minuto. No celular, feche e abra o app para
+pegar a versão nova. Pelas regras da Vercel, o plano grátis (Hobby) é só para uso pessoal e não comercial.
+
 ## Parte B — Criar o banco no Supabase
 
 1. Entre em https://supabase.com com a conta que vai usar e clique em **New project**:
