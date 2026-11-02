@@ -5,6 +5,20 @@ Formato: [vX.Y.Z] - AAAA-MM-DD
 
 ---
 
+## [v2.3.0] - 2026-11-02
+
+### Mudado
+- O app abre só na tela de login (e-mail e senha). O assistente de primeiro acesso ("Bem-vindo", 2 passos, dados de
+  exemplo) saiu. No primeiro login o app abre vazio no Início. Dados de exemplo e backup continuam em
+  Configurações > Dados
+- O servidor (URL e chave pública do Supabase) vem do novo arquivo `nuvem.json`, editável no próprio GitHub. Vazio,
+  a tela de login pede a URL e a chave uma vez por aparelho. A chave secreta é recusada
+- Sem login o app não abre: saem "Usar só neste aparelho" (login) e "Desligar a nuvem" (Configurações). Com o
+  `nuvem.json` preenchido, a tela de login não mostra "Trocar servidor"
+- `NUVEM.md`, `PUBLICAR.md` (Partes C e D), `README.md` e decisão 109 atualizados; 369 testes
+
+---
+
 ## [v2.2.2] - 2026-10-23
 
 ### Corrigido
